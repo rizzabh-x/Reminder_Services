@@ -2,6 +2,7 @@ const cron = require('node-cron');
 const sender = require('../config/emailconfig');
 const emailService = require('../services/email-service')
 
+// It fetches the pending mails and then send mail
 const setupJobs = () => {
     cron.schedule('* * * * *', async () => {
         const response = await emailService.fetchPendingEmails();

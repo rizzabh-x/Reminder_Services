@@ -35,7 +35,7 @@ class TicketRepository {
             })
             return ticket;
         } catch (error) {
-            console.log("something went wrong in the repository layer");
+            console.log("something went wrong in the get repository layer");
             throw error;
         }
     }
