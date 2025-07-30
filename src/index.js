@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const {PORT} = require('./config/serverConfig');
+const {createChannel, subscribeMessage} = require('./utils/messageQueue')
 
 // const {sendBasicEmail} = require('./services/email-service')
 const Jobs = require('./utils/job');
@@ -16,7 +17,7 @@ const setupAndStartServer = () => {
     app.listen(PORT, () => {
         console.log(`Server started at ${PORT}`);
 
-        Jobs();
+        // Jobs();
     });
 }
 
